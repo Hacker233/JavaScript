@@ -1,0 +1,39 @@
+body,h2,ul{
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+}
+li{
+    list-style:none;
+}
+#menu{
+    width:200px;
+    height:250px;
+    margin:50px auto;
+}
+#menu li{
+    border-bottom:1px solid #a5b5ce;
+    background:#8c9cb5;
+    border-top:1px solid #a5b5ce;
+    cursor:pointer;
+}
+#menu h2{
+    text-indent:30px;
+    height:30px;
+    color:#FFF;
+    line-height:30px;
+}
+#menu .list{
+    display:none;
+    background: #eee;
+}
+#menu .list li{
+    background:yellow;
+    padding: 2px 15px;
+}
+.active{
+    background:red;
+}
+.active11{
+    background:#8c9cb5;
+}
