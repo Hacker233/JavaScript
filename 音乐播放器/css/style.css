@@ -1,0 +1,46 @@
+.music {
+    width: 200px;
+    height: 300px;
+    background: #333;
+    border-radius: 5px;
+    box-shadow: 3px -3px 3px #666;
+    position: relative;
+}
+.music .screen {
+    height:70%;
+    width:96%;
+    background: #ccc;
+    margin-left:2%;
+    margin-top: 2%;
+}
+
+.music .buttons {
+    height:25%;
+    width:96%;
+    background: wheat;
+    margin-left:2%;
+    margin-top: 2%;
+}
+.music .screen img{
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 40px;
+    cursor: pointer;
+    transform:rotate(30deg);
+    -webkit-transform:rotate(30deg);
+    -o-transform:rotate(30deg);
+    -ms-transform:rotate(30deg);
+    -moz-transform:rotate(30deg);
+}
+.music .buttons img {
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.music .buttons img:hover{
+    background-color: rgba(0, 0, 0, 0.13);
+}
