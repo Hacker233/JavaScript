@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="calculator">
+    <div id="calcu-head">
+        <h6>简单的计算器</h6>
+    </div>
+    <form name="calculator" action="" method="get">
+        <div id="calcu-screen">
+            <input type="text" name="numScreen" class="screen" value="0" onfocus="this.blur()">
+        </div>
+        <div id="calcu_btn">
+            <ul> <!--配置按钮-->
+                <li onclick="command(7)">7</li>
+                <li onclick="command(8)">8</li>
+                <li onclick="command(9)">9</li>
+                <li class="tool" onclick="del()">←</li>
+                <li class="tool" onclick="clearscreen()">C</li>
+                <li onclick="command(4)">4</li>
+                <li onclick="command(5)">5</li>
+                <li onclick="command(6)">6</li>
+                <li class="tool" onclick="times()">×</li>
+                <li class="tool" onclick="divide()">÷</li>
+                <li onclick="command(1)">1</li>
+                <li onclick="command(2)">2</li>
+                <li onclick="command(3)">3</li>
+                <li class="tool" onclick="plus()">+</li>
+                <li class="tool" onclick="minus()">-</li>
+                <li onclick="command(0)">0</li>
+                <li onclick="dzero()">00</li>
+                <li onclick="dot()">.</li>
+                <li class="tool" onclick="persent()">%</li>
+                <li class="tool" onclick="equal()">=</li>
+            </ul>
+        </div>
+        <div id="calcu-foot">
+            <span id="note"></span>
+        </div>
+    </form>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
