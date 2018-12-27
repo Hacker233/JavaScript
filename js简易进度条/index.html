@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简易版进度条</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <!-- 最外层的容器 -->
+    <div id="wrapper">
+        <!-- 进度条容器 -->
+        <div id="progressbar">
+            <!-- 进度条 -->
+            <div id="fill"></div>
+        </div>
+    </div>
+</body>
+<script>
+(function(){
+    var progressbar = {
+        init: function() {
+            var fill = document.getElementById("fill");
+            var count = 0;
+            var timer = setInterval(() => {
+                count++;
+                fill.innerHTML=count + '%';
+                if(count===100){
+                    clearInterval(timer)
+                }
+            }, 17);
+        }
+    };
+    progressbar.init();
+})()
+</script>
+</html>

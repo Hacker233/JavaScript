@@ -1,0 +1,30 @@
+#wrapper {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+}
+#progressbar {
+    width: 180px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 1px solid #000000;
+}
+/* 设置进度条动画 */
+#fill {
+    animation: move 2s;
+    text-align: center;
+    background-color: #6caf00;
+    color: #ffffff;
+}
+
+/* 实现元素宽度过度的动画效果 */
+@keyframes move {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
