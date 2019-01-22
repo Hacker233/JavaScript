@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片懒加载</title>
+    <style>
+        img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img data-src="./images/1.jpg" alt="">
+    <img data-src="./images/2.jpg" alt="">
+    <img data-src="./images/3.jpg" alt="">
+    <img data-src="./images/4.jpg" alt="">
+    <img data-src="./images/5.jpg" alt="">
+    <img data-src="./images/6.jpg" alt="">
+    <img data-src="./images/7.jpg" alt="">
+    <img data-src="./images/8.jpg" alt="">
+    <img data-src="./images/9.jpg" alt="">
+    <img data-src="./images/10.jpg" alt="">
+    <img data-src="./images/1.jpg" alt="">
+    <img data-src="./images/2.jpg" alt="">
+</body>
+<script>
+        var imgs = document.querySelectorAll('img');
+
+        //用来判断bound.top<=clientHeight的函数，返回一个bool值
+        function isIn(el) {
+            var bound = el.getBoundingClientRect();
+            var clientHeight = window.innerHeight;
+            return bound.top <= clientHeight;
+        } 
+        //检查图片是否在可视区内，如果不在，则加载
+        function check() {
+            Array.from(imgs).forEach(function(el){
+                if(isIn(el)){
+                    loadImg(el);
+                }
+            })
+        }
+        function loadImg(el) {
+            if(!el.src){
+                var source = el.dataset.src;
+                el.src = source;
+            }
+        }
+        // //offsetTop是元素与offsetParent的距离，循环获取直到页面顶部
+        // function getTop(e) {
+        //     var T = e.offsetTop;
+        //     while(e = e.offsetParent) {
+        //         T += e.offsetTop;
+        //     }
+        //     return T;
+        // }
+
+        // function lazyLoad(imgs) {
+        //     var H = document.documentElement.clientHeight;//获取可视区域高度
+        //     var S = document.documentElement.scrollTop || document.body.scrollTop;
+        //     for (var i = 0; i < imgs.length; i++) {
+        //         if (H + S > getTop(imgs[i])) {
+        //             imgs[i].src = imgs[i].getAttribute('data-src');
+        //         }
+        //     }
+        // }
+
+        window.onload = window.onscroll = function () { //onscroll()在滚动条滚动的时候触发
+            check();
+        }
+</script>
+</html>
