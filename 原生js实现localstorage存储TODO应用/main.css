@@ -1,0 +1,68 @@
+html {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    padding: 20px;
+    max-width: 350px;
+    background: rgba(228, 215, 215, 0.95);
+    box-shadow: 0 0 0 5px rgba(187, 157, 157, 0.5);
+}
+h2 {
+    text-align: center;
+    margin: 0;
+    font-weight: 200;
+}
+.plates {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+.plates li {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding: 10px 0;
+  font-weight: 100;
+  display: flex;
+}
+.plates label {
+  flex:1;
+  cursor: pointer;
+}
+.plates input {
+  display: none;
+}
+.plates input + label:before {
+  content: '⬜️';
+  margin-right: 10px;
+}
+.plates input:checked + label:before {
+  content: '☆';
+}
+.add-items {
+  margin-top: 20px;
+}
+.add-items input {
+  padding:10px;
+  outline:0;
+  border:1px solid rgba(0,0,0,0.1);
+}
+.add-items input:nth-child(1){
+  width: 61.3%;
+}
+.add-items input:nth-child(2) {
+  width: 30%;
+  color: rgb(85, 108, 128);
+  font-weight: 700;
+}
+.buttons button {
+  width: 100px;
+  margin-top: 10px;
+  height: 40px;
+  color: rgb(85, 108, 128);
+  font-weight: 700;
+  border:1px solid rgba(0,0,0,0.1);
+}
