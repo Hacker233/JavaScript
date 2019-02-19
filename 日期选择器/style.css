@@ -1,0 +1,64 @@
+/* 最外层区域 */
+.ui-datepicker-wrapper {
+    width: 240px;
+    font-size: 16px;
+    color: #666666;
+    box-shadow: 2px 2px 8px 2px rgba(128, 128, 128, 0.3);
+    display: none;
+    position: absolute;
+}
+.ui-datepicker-wrapper-show {
+    display: block;
+}
+
+/* 头部区域 */
+.ui-datepicker-wrapper .ui-datepicker-header {
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #f0f0f0;
+    border-bottom: 1px solid #cccccc;
+    font-weight: bold;
+}
+/* 设置两个按钮 */
+.ui-datepicker-wrapper .ui-datepicker-btn {
+    font-family: serif;
+    font-size: 20px;
+    width: 20px;
+    height: 50px;
+    line-height: 50px;
+    color: #1abc9c;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.ui-datepicker-wrapper .ui-datepicker-prev-btn {
+    float: left;
+}
+.ui-datepicker-wrapper .ui-datepicker-next-btn {
+    float: right;
+}
+/* body区域 */
+.ui-datepicker-wrapper .ui-datepicker-body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+/* 表头和正文 */
+.ui-datepicker-wrapper .ui-datepicker-body th,
+.ui-datepicker-wrapper .ui-datepicker-body td {
+    height: 30px;
+    text-align: center;
+}
+.ui-datepicker-wrapper .ui-datepicker-body th {
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+/* 表格部分 */
+.ui-datepicker-wrapper .ui-datepicker-body td {
+    border: 1px solid #f0f0f0;
+    font-size: 10px;
+    width: 14%;
+    cursor: pointer;
+}
