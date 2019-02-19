@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+<div id="wrap">
+    <ul id="content">
+        <li><img src="images/1.jpg" alt=""></li>
+        <li><img src="images/2.jpg" alt=""></li>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+        <li><img src="images/5.jpg" alt=""></li>
+        <li><img src="images/6.jpg" alt=""></li>
+    </ul>
+    <ul id="tips">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</div>
+<script src="js/move.js"></script>
+<script>
+        var wrap=document.getElementById('wrap');
+        var content=document.getElementById('content');
+        var tips=document.getElementById('tips');
+        var aLi=tips.getElementsByTagName('li');
+        var now=0;
+        for(var i=0;i<aLi.length;i++)
+        {
+            aLi[0].className="active";
+            content.style.left=0+"px";
+            aLi[i].onclick=function() {
+                now=this.index;
+                play();
+            }
+        }
+        function play() {
+            for(var j=0;j<aLi.length;j++)
+            {
+                aLi[j].className="";
+            }
+            aLi[now].className="active";
+            startMove(content,{left: -400 * now,});
+        }
+        function autoPlay() {
+            now++;
+            if(now==aLi.length)
+            {
+                now=0;
+            }
+            play();
+        }
+        var timer=setInterval(autoPlay,2000);
+        wrap.onmouseover= function () {
+            clearInterval(timer);
+        }
+        wrap.onmouseout=function() {
+            timer=setInterval(autoPlay,2000);
+        }
+</script>
+</body>
+</html>

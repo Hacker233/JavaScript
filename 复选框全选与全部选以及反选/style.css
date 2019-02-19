@@ -1,0 +1,39 @@
+body,dl,dt,dd,p {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Tahoma;
+    font-size: 12px;
+}
+label,input,a {
+    vertical-align: middle;
+}
+label{
+    padding:0 10px 0 5px;
+}
+a{
+    color:#09f;
+    text-decoration:none;
+}
+a:hover{
+    color:red;
+}
+dl{
+    width:120px;
+    margin:10px auto;
+    padding:10px 5px;
+    border:1px solid #666;
+    border-radius:5px;
+    background:#fafafa;
+}
+dt{
+    padding-bottom:10px;
+    border-bottom:1px solid #666;
+}
+dt label{
+    font-weight:700;
+}
+p{
+    margin-top:10px;
+}

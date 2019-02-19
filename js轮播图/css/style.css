@@ -1,0 +1,45 @@
+ul,li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+#wrap {
+    width: 400px;
+    height: 225px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+li {
+    float: left;
+}
+#tips li {
+    margin: 5px;
+    border: 1px solid #f60;
+    width: 20px;
+    height: 20px;
+    line-height:20px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.active {
+    background: #f60;
+}
+img {
+    vertical-align: top;
+    width:400px;
+}
+#content {
+    width: 2400px;
+    position: absolute;
+    left: -1200px;
+}
+#content li {
+    float: left;
+}
+#tips {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+}

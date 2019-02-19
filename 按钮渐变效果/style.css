@@ -1,0 +1,24 @@
+input {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #000;
+    background: -webkit-linear-gradient(90deg,#fff,#fff,#000,#000);
+    background:    -moz-linear-gradient(90deg, #fff, #fff, #000, #000);
+    background:      -o-linear-gradient(90deg, #fff, #fff, #000, #000);
+    background:         linear-gradient(90deg, #fff, #fff, #000, #000);
+    background-size: 300% 300%;
+    background-position: 1% 50%;
+    transition: all 1s ease;
+    -webkit-transition: background 0.5s ease;
+    outline: none;
+    cursor: pointer;
+}
+input:hover {
+    color: #fff;
+    background-position: 99% 50%;
+}

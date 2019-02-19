@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#div1{
+    margin:50px;
+    position:relative;
+}
+#div1 ul li{
+    list-style:none;
+    float:left;
+    margin-right:15px;
+}
+#div1 ul li.active{
+    color:yellow;
+}
+#div1 ul li:hover {
+    cursor: pointer;
+}
+#div1 p{
+    width:80px;
+    height:20px;
+    border:1px solid red;
+    font-size:12px;
+    font-weight:bold;
+    line-height:20px;
+    text-align:center;
+    position:absolute;
+    top:30px;
+    left:0;
+}
