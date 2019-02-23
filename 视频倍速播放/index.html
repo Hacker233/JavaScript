@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倍速播放</title>
+<style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-size: cover;
+      font-family: sans-serif;
+    }
+    .wrapper {
+      width: 850px;
+      display: flex;
+    }
+    video {
+      box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .speed {
+      background: #efefef;
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      margin: 10px;
+      border-radius: 50px;
+      box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .speed-bar {
+      width: 100%;
+      background: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%);
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+      color: white;
+      height: 16.3%;
+    }
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <video class="flex" width="765" height="430" src="./新闻.mp4" loop controls></video>
+        <div class="speed">
+          <div class="speed-bar">1×</div>
+        </div>
+    </div>
+</body>
+<script>
+    // 获取三个元素
+    const speed = document.querySelector('.speed');
+    const bar = speed.querySelector('.speed-bar');
+    const video = document.querySelector('.flex');
+  
+    function handleMove(e) {
+        const y = e.pageY - this.offsetTop;//获取鼠标现在位置在速率框中的位置
+        const percent = y / this.offsetHeight;
+        const min = 0.4;//设置最小速率为0.4
+        const max = 4;//设置最小速率为4
+        const height = Math.round(percent * 100) + '%';//取整
+        const playbackRate = percent * (max - min) + min;
+        bar.style.height = height;//设置显示高度
+        bar.textContent = playbackRate.toFixed(2) + '×';
+        video.playbackRate = playbackRate;//通过playbackRate属性改变播放速率
+      }
+    // 给鼠标添加移动事件
+    speed.addEventListener('mousemove', handleMove);
+</script>
+</html>
